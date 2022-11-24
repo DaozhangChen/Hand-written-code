@@ -4,7 +4,7 @@ const ajax = (methods, url, data, success, fail) => {
   request.onreadystatechange = function () {
     if (request.readyState === 4) {
       if (request.status >= 200 && request.status <= 300) {
-        success(request);
+        success(request); //记得传参
       } else {
         fail(request);
       }

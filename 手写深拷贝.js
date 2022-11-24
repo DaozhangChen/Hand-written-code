@@ -53,7 +53,7 @@ const deepClone = (a, cache) => {
     }
     cache.set(a, result);
     for (let key in a) {
-      if (a.hasOwnProperty(key)) {
+      if (a.hasOwnProperty(key)) {   //注意这里
         result[key] = deepClone(a[key], cache);
       }
     }
